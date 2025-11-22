@@ -1,0 +1,58 @@
+/* app/globals.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-bright-ocean-50: #e8f2fc;
+    --color-bright-ocean-100: #d2e5f9;
+    --color-bright-ocean-200: #a5ccf3;
+    --color-bright-ocean-300: #78b2ed;
+    --color-bright-ocean-400: #4a99e8;
+    --color-bright-ocean-500: #1d7fe2;
+    --color-bright-ocean-600: #1766b5;
+    --color-bright-ocean-700: #124c87;
+    --color-bright-ocean-800: #0c335a;
+    --color-bright-ocean-900: #06192d;
+    --color-bright-ocean-950: #041220;
+
+    --color-yale-blue-50: #e7f3fd;
+    --color-yale-blue-100: #d0e6fb;
+    --color-yale-blue-200: #a0cdf8;
+    --color-yale-blue-300: #71b5f4;
+    --color-yale-blue-400: #419cf1;
+    --color-yale-blue-500: #1283ed;
+    --color-yale-blue-600: #0e69be;
+    --color-yale-blue-700: #0b4f8e;
+    --color-yale-blue-800: #07345f;
+    --color-yale-blue-900: #041a2f;
+    --color-yale-blue-950: #021221;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-bright-ocean-50 text-bright-ocean-900 dark:bg-yale-blue-950 dark:text-yale-blue-50 transition-colors duration-300;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-bright-ocean-500 hover:bg-bright-ocean-600 dark:bg-yale-blue-500 dark:hover:bg-yale-blue-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl;
+  }
+
+  .btn-secondary {
+    @apply bg-bright-ocean-200 hover:bg-bright-ocean-300 dark:bg-yale-blue-800 dark:hover:bg-yale-blue-700 text-bright-ocean-900 dark:text-yale-blue-50 px-6 py-3 rounded-lg font-semibold transition-all duration-300 border-2 border-transparent;
+  }
+
+  .card {
+    @apply bg-white dark:bg-yale-blue-900 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-bright-ocean-200 dark:border-yale-blue-700;
+  }
+
+  .gradient-bg {
+    @apply bg-gradient-to-br from-bright-ocean-100 to-bright-ocean-50 dark:from-yale-blue-950 dark:to-yale-blue-900;
+  }
+}
